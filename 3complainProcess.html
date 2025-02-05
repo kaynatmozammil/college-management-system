@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Complain Process</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/c9294f895d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="principle.css" />
+  <style>
+    /* Header Section */
+    header {
+      background-color: white;
+      color: green;
+      padding: 5px 0;
+      margin-left: 250px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+    }
+
+    header h2 {
+      font-size: 20px;
+    }
+
+    header h3 {
+      color: green;
+      font-size: 16px;
+    }
+
+    /* Sidebar Section */
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: green;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    /* Basic page styling */
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    /* Layout for the stages */
+    .complaint-progress {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .stage {
+      border: 2px solid #ccc;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 14px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button:disabled {
+      background-color: #e0e0e0;
+      cursor: not-allowed;
+    }
+
+    button:hover:not(:disabled) {
+      background-color: #45a049;
+    }
+
+    /* Additional content styling */
+    .info-section {
+      /* background-color: #fff; */
+      border-radius: 8px;
+      padding: 20px;
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      width: 80%;
+      /* max-width: 800px; */
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .principal{
+      background-color: rgb(118, 214,118);
+      border-radius: 8px;
+      padding-left: 20px;
+    }
+
+
+
+   
+ /* Footer Section */
+ footer {
+      margin-top: 20px;
+      background-color: green;
+      color: white;
+      width: calc(100% - 250px);
+      height: 450px;
+      margin-left: 250px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    /* Social Media Icons */
+    .icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .youtube {
+      background-color: #FF0000;
+    }
+
+    .instagram {
+      background-color: white;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/120px-Instagram_icon.png');
+    }
+
+    .x {
+      background-color: #000000;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .fa-brands {
+      color: white;
+      font-size: 25px;
+    }
+
+    .social-media div {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Contact Section */
+    .contact,
+    .rights-reserved,
+    .google-map {
+      margin: 20px;
+    }
+
+    .contact p,
+    .rights-reserved p {
+      color: white;
+    }
+
+    .google-map iframe {
+      width: auto;
+      height: auto;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section Start -->
+  <header>
+    <h2>कॉलेज प्रबंधन प्रणाली کالج مینیجمنٹ سسٹم</h2>
+    <h1>College Management System</h1>
+    <h3>Jamia Nagar, New Delhi-110025</h3>
+  </header>
+  <!-- Header Section End -->
+
+  <!-- Sidebar Section Start -->
+  <div class="sidebar">
+    <div class="profile">
+      <img id="profilePicture" src="images/user.jpg" alt="Profile Picture" />
+      <div class="upload-icon" id="uploadIcon">
+        <i class="fas fa-plus"></i>
+      </div>
+      <input type="file" id="imageUpload" accept="image/*" />
+    </div>
+    <h3>Kaynat Mozammil</h3>
+
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="1princioleHome.html" target="content-frame">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="2meeting.html" target="content-frame">
+          <i class="fa-solid fa-handshake"></i>
+          <span>Meeting</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="3complainProcess.html" target="content-frame">
+          <i class="fa-solid fa-exclamation"></i>
+          <span>Complaint escalation</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="4funcApp.html" target="content-frame">
+          <i class="fa-solid fa-check"></i>
+          <span>Function/Program Approval</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="principal">
+    <h1>Complaint Escalation Process</h1>
+
+    <div class="info-section">
+      <h2>What is a Complaint?</h2>
+      <p>
+        A complaint is an expression of dissatisfaction or concern regarding a
+        particular situation, service, or product. In an educational context,
+        complaints may arise from students, parents, or staff about issues
+        such as unfair treatment, inadequate resources, or unaddressed
+        grievances.
+      </p>
+
+      <h2>Purpose of the Complaint Escalation Process</h2>
+      <p>
+        The complaint escalation process is designed to ensure that all
+        concerns are addressed systematically and fairly. It involves several
+        levels of approval, ensuring that complaints are evaluated and
+        resolved by appropriate authorities.
+      </p>
+
+      <h2>Steps in the Escalation Process</h2>
+      <p>
+        1. **Class Teacher Approval**: The initial stage where the class
+        teacher reviews the complaint and determines its validity.
+      </p>
+      <p>
+        2. **Head of Department Approval**: If the complaint is upheld, it is
+        escalated to the head of the department for further assessment.
+      </p>
+      <p>
+        3. **Principal Approval**: The final stage involves the principal, who
+        makes the ultimate decision on the complaint.
+      </p>
+    </div>
+
+    <div class="complaint-progress">
+      <div class="stage" id="teacher">
+        <h2>Class Teacher Approval</h2>
+        <p>Status: <span id="teacherStatus">Pending</span></p>
+        <button onclick="approve('teacher')">Approve</button>
+      </div>
+
+      <div class="stage" id="hod">
+        <h2>Head of Department Approval</h2>
+        <p>Status: <span id="hodStatus">Pending</span></p>
+        <button onclick="approve('hod')" disabled>Approve</button>
+      </div>
+
+      <div class="stage" id="principal">
+        <h2>Principal Approval</h2>
+        <p>Status: <span id="principalStatus">Pending</span></p>
+        <button onclick="approve('principal')" disabled>Approve</button>
+      </div>
+    </div>
+  </div>
+
+   <!-- Footer Section Start -->
+   <footer>
+    <div class="footer-container">
+      <div class="contact" id="contact">
+        <h3>Contact</h3>
+        <p>Email: info@cms.com</p>
+        <p>Mobile No- 123-456-7890</p>
+        <h3>Follow Us</h3>
+        <div class="social-media">
+          <!-- <h3>Connect with Us</h3> -->
+          <div>
+            <a href="https://www.youtube.com/" class="icon youtube" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+
+            <a class="icon instagram" href="https://www.instagram.com/jamia_millia_islamia/" target="_blank">
+            </a>
+            <a class="icon x" href="https://twitter.com/jamia_millia" target="_blank">
+              <!-- <img src="trw.avif" alt="Twitter" /> -->
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="google-map">
+        <h3>Find Us Here</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9776401724725!2d77.59636731495319!3d28.57975528239972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1cfb31535e7b%3A0xe743b79db0df9941!2sJamia%20Millia%20Islamia!5e0!3m2!1sen!2sin!4v1633914557483!5m2!1sen!2sin"
+          width="300" height="150" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="rights-reserved">
+        <h3>© 2024 College Management System</h3>
+        <p>All Rights Reserved</p>
+        <strong>
+          <p>📍Jamia Nagar, New Delhi-110025</p>
+        </strong>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <div class="content">
+    <!-- iFrame to display the selected HTML content -->
+  </div>
+  <script>
+    const imageUpload = document.getElementById("imageUpload");
+    const profilePicture = document.getElementById("profilePicture");
+    const uploadIcon = document.getElementById("uploadIcon");
+
+    uploadIcon.addEventListener("click", function () {
+      imageUpload.click();
+    });
+
+    imageUpload.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profilePicture.src = e.target.result;
+        };
+        reader.readAsDataURL(file); // Convert to base64 string
+      }
+    });
+  </script>
+
+  <script>
+    function approve(stage) {
+      if (stage === "teacher") {
+        document.getElementById("teacherStatus").innerText = "Approved";
+        document
+          .getElementById("teacher")
+          .querySelector("button").disabled = true;
+        document
+          .getElementById("hod")
+          .querySelector("button").disabled = false;
+      } else if (stage === "hod") {
+        document.getElementById("hodStatus").innerText = "Approved";
+        document
+          .getElementById("hod")
+          .querySelector("button").disabled = true;
+        document
+          .getElementById("principal")
+          .querySelector("button").disabled = false;
+      } else if (stage === "principal") {
+        document.getElementById("principalStatus").innerText = "Approved";
+        document
+          .getElementById("principal")
+          .querySelector("button").disabled = true;
+        alert("Complaint fully approved by all stages.");
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+/* Meeting information section styling */
+.meeting-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.meeting-info ul {
+    list-style-type: none;
+}
+
+.meeting-info ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.meeting-info ul li span {
+    font-weight: bold;
+}

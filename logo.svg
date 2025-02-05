@@ -1,0 +1,27 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="100" cy="100" r="95" fill="#4CAF50" stroke="#FFF" stroke-width="10"/>
+
+    <!-- Book Icon -->
+    <path d="M70,50 L130,50 Q140,50 140,60 L140,120 Q140,130 130,130 L70,130 Q60,130 60,120 L60,60 Q60,50 70,50 Z" fill="#FFF"/>
+    <line x1="60" y1="90" x2="140" y2="90" stroke="#4CAF50" stroke-width="3"/>
+    <line x1="90" y1="50" x2="90" y2="130" stroke="#4CAF50" stroke-width="3"/>
+    <line x1="110" y1="50" x2="110" y2="130" stroke="#4CAF50" stroke-width="3"/>
+
+    <!-- Gear Icon -->
+    <circle cx="100" cy="100" r="30" fill="#4CAF50" stroke="#FFF" stroke-width="3"/>
+    <circle cx="100" cy="100" r="20" fill="#FFF"/>
+    <g fill="#4CAF50">
+        <rect x="98" y="65" width="4" height="10"/>
+        <rect x="98" y="125" width="4" height="10"/>
+        <rect x="65" y="98" width="10" height="4"/>
+        <rect x="125" y="98" width="10" height="4"/>
+        <rect x="81" y="74" width="4" height="10" transform="rotate(45 100 100)"/>
+        <rect x="115" y="118" width="4" height="10" transform="rotate(45 100 100)"/>
+        <rect x="74" y="119" width="4" height="10" transform="rotate(-45 100 100)"/>
+        <rect x="118" y="81" width="4" height="10" transform="rotate(-45 100 100)"/>
+    </g>
+
+    <!-- Text -->
+    <text x="100" y="185" font-family="Arial" font-size="24" fill="#FFF" text-anchor="middle">EMS</text>
+</svg>

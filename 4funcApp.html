@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Approval Section</title>
+  <link rel="stylesheet" href="principle.css">
+  <script src="https://kit.fontawesome.com/c9294f895d.js" crossorigin="anonymous"></script>
+  <style>
+    /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        font-family: Arial, sans-serif;
+      } */
+
+       /* Header Section */
+    header {
+      background-color: white;
+      color: green;
+      padding: 5px 0;
+      margin-left: 250px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+    }
+
+    header h2 {
+      font-size: 20px;
+    }
+
+    header h3 {
+      color: green;
+      font-size: 16px;
+    }
+
+    /* Sidebar Section */
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: green;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    /* Principal section styling */
+    .principal h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .principal p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Approval section styling */
+    .approval-section {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #ecf0f1;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .approval-section h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .approval-section ul {
+      list-style-type: none;
+    }
+
+    .approval-section ul li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .approval-section ul li span {
+      font-weight: bold;
+    }
+
+    /* Buttons styling */
+    .buttons {
+      margin-top: 15px;
+    }
+
+    .buttons button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .approve-btn {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    .approve-btn:hover {
+      background-color: #2ecc71;
+    }
+
+    .disapprove-btn {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .disapprove-btn:hover {
+      background-color: #c0392b;
+    }
+
+    /* Message display styling */
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+     /* Footer Section */
+     footer {
+      margin-top: 20px;
+      background-color: green;
+      color: white;
+      width: calc(100% - 250px);
+      height: 450px;
+      margin-left: 250px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    /* Social Media Icons */
+    .icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .youtube {
+      background-color: #FF0000;
+    }
+
+    .instagram {
+      background-color: white;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/120px-Instagram_icon.png');
+    }
+
+    .x {
+      background-color: #000000;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .fa-brands {
+      color: white;
+      font-size: 25px;
+    }
+
+    .social-media div {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Contact Section */
+    .contact,
+    .rights-reserved,
+    .google-map {
+      margin: 20px;
+    }
+
+    .contact p,
+    .rights-reserved p {
+      color: white;
+    }
+
+    .google-map iframe {
+      width: auto;
+      height: auto;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section Start -->
+  <header>
+    <h2>कॉलेज प्रबंधन प्रणाली کالج مینیجمنٹ سسٹم</h2>
+    <h1>College Management System</h1>
+    <h3>Jamia Nagar, New Delhi-110025</h3>
+  </header>
+  <!-- Header Section End -->
+
+  <!-- Sidebar Section Start -->
+  <div class="sidebar">
+    <div class="profile">
+      <img id="profilePicture" src="images/user.jpg" alt="Profile Picture" />
+      <div class="upload-icon" id="uploadIcon">
+        <i class="fas fa-plus"></i>
+      </div>
+      <input type="file" id="imageUpload" accept="image/*" />
+    </div>
+    <h3>Kaynat Mozammil</h3>
+
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="1princioleHome.html" target="content-frame">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="2meeting.html" target="content-frame">
+          <i class="fa-solid fa-handshake"></i>
+          <span>Meeting</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="3complainProcess.html" target="content-frame">
+          <i class="fa-solid fa-exclamation"></i>
+          <span>Complaint escalation</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="4funcApp.html" target="content-frame">
+          <i class="fa-solid fa-check"></i>
+          <span>Function/Program Approval</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Principal (main content) section -->
+  <div class="principal">
+    <!-- Approval Section -->
+    <div class="approval-section">
+      <h2>Program Approval Request</h2>
+      <ul>
+        <li><span>Program Name:</span> Annual Sports Day</li>
+        <li><span>Date:</span> November 15, 2024</li>
+        <li><span>Venue:</span> School Playground</li>
+        <li><span>Requested by:</span> Sports Committee</li>
+        <li>
+          <span>Description:</span> A day filled with sports events and
+          activities for all grades.
+        </li>
+      </ul>
+
+      <!-- Buttons for approval and disapproval -->
+      <div class="buttons">
+        <button class="approve-btn" onclick="approveProgram()">
+          Approve
+        </button>
+        <button class="disapprove-btn" onclick="disapproveProgram()">
+          Disapprove
+        </button>
+      </div>
+
+      <!-- Message display area -->
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+
+   <!-- Footer Section Start -->
+   <footer>
+    <div class="footer-container">
+      <div class="contact" id="contact">
+        <h3>Contact</h3>
+        <p>Email: info@cms.com</p>
+        <p>Mobile No- 123-456-7890</p>
+        <h3>Follow Us</h3>
+        <div class="social-media">
+          <!-- <h3>Connect with Us</h3> -->
+          <div>
+            <a href="https://www.youtube.com/" class="icon youtube" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+
+            <a class="icon instagram" href="https://www.instagram.com/jamia_millia_islamia/" target="_blank">
+            </a>
+            <a class="icon x" href="https://twitter.com/jamia_millia" target="_blank">
+              <!-- <img src="trw.avif" alt="Twitter" /> -->
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="google-map">
+        <h3>Find Us Here</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9776401724725!2d77.59636731495319!3d28.57975528239972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1cfb31535e7b%3A0xe743b79db0df9941!2sJamia%20Millia%20Islamia!5e0!3m2!1sen!2sin!4v1633914557483!5m2!1sen!2sin"
+          width="300" height="150" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="rights-reserved">
+        <h3>© 2024 College Management System</h3>
+        <p>All Rights Reserved</p>
+        <strong>
+          <p>📍Jamia Nagar, New Delhi-110025</p>
+        </strong>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <!-- JavaScript for handling the approval/disapproval -->
+  <script>
+    function approveProgram() {
+      document.getElementById("message").innerHTML =
+        "The program has been approved by the principal.";
+      document.getElementById("message").style.color = "#27ae60";
+    }
+
+    function disapproveProgram() {
+      document.getElementById("message").innerHTML =
+        "The program has been disapproved by the principal.";
+      document.getElementById("message").style.color = "#e74c3c";
+    }
+  </script>
+</body>
+
+</html>
